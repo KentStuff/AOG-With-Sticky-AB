@@ -550,6 +550,7 @@ namespace AgOpenGPS
                 //generate the turn points
                 ytList = dubYouTurnPath.GenerateDubins(start, goal);
                 AddSequenceLines(head);
+                ABAtYouTurn = goal;
 
                 if (ytList.Count == 0) return false;
                 else youTurnPhase = 1;
@@ -833,6 +834,7 @@ namespace AgOpenGPS
 
                 //generate the turn points
                 ytList = dubYouTurnPath.GenerateDubins(start, goal);
+                ABAtYouTurn = goal;
                 int count = ytList.Count;
                 if (count == 0) return false;
 
